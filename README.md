@@ -6,9 +6,9 @@ For them to effectively plan and prepare for this requires analysis of multiple 
 By creating tables in SQL and running queries new CSV files will be generated for management to review. 
 
 ### Purpose
-The SQL file [Employee_Database.challenge.sql](Employee_Database.challenge.sql) will run queries to generate the required CSV files.
+The SQL file [Employee_Database.challenge.sql](Queries/Employee_Database.challenge.sql) will run queries to generate the required CSV files.
 One output will be [retiring_titles.csv](Data/retiring_titles.csv) which is a file that provides the number of employees retiring by title.
-The other key output will be [mentorship_elgibility.csv](Data/mentorship_elgibility.csv) which will provide a list of employees eligible for the mentorship program.
+The other key output will be [mentorship_eligibility.csv](Data/mentorship_eligibility.csv) which will provide a list of employees eligible for the mentorship program.
 
 ## Employee Database Results
 To perform the employee database analysis required joining multiple data tables into new more useful data tables.
@@ -36,7 +36,7 @@ Senior staff makes up almost 64% of the employees retiring.
 	
 Half of the employees retiring have engineering titles.
 
-The retirement_titles table was built by joining the employees and titles tables.
+The retirement_titles [retirement_titles.csv](Data/retirement_titles.csv) table was built by joining the employees and titles tables.
 They were joined with the primary key which is employee number with this code 'INNER JOIN titles as ti
 ON e.emp_no = ti.emp_no.
 		
@@ -48,13 +48,16 @@ ON e.emp_no = ti.emp_no.
 ## Employee Database Summary
 
 - How many roles will need to be filled as the "silver tsunami" begins to make an impact?
+
 There are 90,398 roles that will potentially need to be filled as employees begin to retire.
-The unique_titles file should be modified to include the employee’s department as well as the employee manager.
+The unique_titles [unique_titles.csv](Data/unique_titles.csv) file should be modified to include the employee’s department as well as the employee manager.
 This can be accomplished by joining the dept_manager table to the unique_titles table and adding the additional columns.
+The ERD [EmployeeDB.png](EmployeeDB.png) is a visual display of the datasets and their primary keys.
 The retiring employee's managers have to have specific department's data.
 With that data management can evaluate if roles need to be filled and setup mentorship partnerships.
 
 - Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+
 There are only 1,549 employees identified as being eligible for the employee mentorship program.
 With over 90,000 employees retiring there are more than enough qualified retirement-ready employees to mentor the next generation.
 High achieving younger employees as well as employees with longevity should also be eligible for the mentorship program.
