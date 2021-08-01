@@ -12,7 +12,8 @@ The other key output will be [mentorship_eligibility.csv](Data/mentorship_eligib
 
 ## Employee Database Results
 To perform the employee database analysis required joining multiple data tables into new more useful data tables.
-The JOIN statement was used in conjunction with the INTO statement to accomplish this.
+The ERD [EmployeeDB.png](EmployeeDB.png) is a visual display of the data tables and their primary keys.
+The JOIN statement was used in conjunction with the INTO statement to create new tables.
 The SQL query utilized the DISTINCT ON statement to retrieve the 1st occurrence of the employee number for each data set of rows.
 Doing this with the ORDER BY statement removed rows with duplicate employee numbers which was caused by employees having multiple roles.
 
@@ -52,7 +53,6 @@ ON e.emp_no = ti.emp_no.
 There are 90,398 roles that will potentially need to be filled as employees begin to retire.
 The [unique_titles.csv](Data/unique_titles.csv) file should be modified to include the employee’s department as well as the employee manager.
 This can be accomplished by joining the dept_manager table to the unique_titles table and adding the additional columns.
-The ERD [EmployeeDB.png](EmployeeDB.png) is a visual display of the data tables and their primary keys.
 The retiring employee's managers have to have specific department's data.
 With that data management can evaluate if roles need to be filled and setup mentorship partnerships.
 
